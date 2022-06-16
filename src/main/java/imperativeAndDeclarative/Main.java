@@ -28,6 +28,15 @@ public class Main {
             }
         }
 
+        for (Person female : females) {
+            System.out.println(female);
+        }
+
+        System.out.println("\n## declarative");
+        persons.stream()
+                .filter((person) -> FEMALE.equals(person.getGender()))
+                .forEach(System.out::println);
+
     }
 
     @Data
